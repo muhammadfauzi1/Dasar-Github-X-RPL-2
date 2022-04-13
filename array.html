@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Array</title>
+
+    <style>
+        form {
+            line-height: 2em
+        }
+    </style>
+</head>
+
+<body style="font-family: calibri;">
+    <center>
+        <h2>Menu Makanan & Minuman di Restoran</h2>
+        <form action=>
+            <label>Nama Pemesan:</label>
+            <input type="text">
+            <br>
+            <label for="jumlah">Jumlah Pesanan</label>
+            <input type="number" id="jum">
+            <br>
+            <button type="button" onclick="ulang()" id="proses">Proses</button>
+        </form>
+        <div id="hasil"></div>
+        <script>
+            function ulang() {
+                // jumlah
+                var jum = document.getElementById("jum").value;
+                var jum;
+                var text = "";
+                var lanjut = "<button id=`simpan`  type=`button` onclick=`simpan()`>Simpan</button>"
+                var jumlah = jum
+                for (jumlah = 1; jumlah <= jum; jumlah++) {
+
+                    text += "Pesanan ke- " + jumlah + "<br>" +
+                        "<form> <label>Pilih Paket : </label><input type=`text` id=`pilih`></form>" +
+                        "<form> <label>Harga : </label><input type=`number` id=`harga`></form>" +
+                        "<form> <label>Jumlah : </label><input type=`number` id=`jumlah`></form>" + "<br>" + "<br>";
+                    // lanjut
+                    lanjut
+                }
+                document.getElementById("hasil").innerHTML = text + lanjut;
+
+                function simpan() {
+                    var pilih;
+                    var pilih = document.getElementById('nama').value;
+                    var harga = parseInt(document.getElementById('harga').value);
+                    var harga;
+                    var jumlah = parseInt(document.getElementById('jumlah').value);
+                    var jumlah;
+                    var total = harga * jumlah;
+                    var total = parseInt(harga) * parseInt(jumlah);
+                    var simpan = "<table border=`1`><thead><tr><th>Nama Paket</th><th>Harga</th></tr></thead></table>"
+                    var simpan = document.getElementById("simpan").value;
+                }
+
+
+            }
+        </script>
+    </center>
+</body>
+
+</html>
